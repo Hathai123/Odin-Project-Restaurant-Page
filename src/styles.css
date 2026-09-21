@@ -40,7 +40,8 @@ nav > button{
     font-size: 24px;
     opacity: 50%;
 }
-nav > button:hover{
+/* make hover change only when it not active */
+nav > button:not(.active):hover{
     color: orange;
     opacity: 100%;
 }
@@ -49,38 +50,7 @@ nav > button:hover{
     flex: 1;
 }
 
-/* Home's style */
-.home{
-    width: 100%;
-    height: 100%;
-    background-color: rgb(0, 0, 0,0.6);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-wrap: nowrap;
-}
-/* Home - restaurant's name */
-.storeNameTH{
-    font-family: Charmonman,serif;
-    color: orange;
-    font-size: 80px;
-}
-.storeNameEN{
-    font-family: Sarabun,sans-serif;
-    color: white;
-    font-size: 30px;
-    position: relative;
-    top: -30px;
-}
-/* Home - menu's button */
-.toMenuBtn{
-    padding: 15px;
-    background-color: orange;
-    border: none;
-    border-radius: 5px;
-    font-size: 20px;
-}
-.toMenuBtn:hover{
-    color: white;
+.active{
+    opacity: 100%;
+
 }
