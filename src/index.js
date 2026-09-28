@@ -1,6 +1,7 @@
 import "./styles.css";
 
 import homePage from "./homePage/home.js";
+import menuPage from "./menuPage/menu.js";
 
 const content = document.getElementById("content");
 
@@ -26,7 +27,7 @@ setPage(homePage());
 const homeBtn = document.getElementById("homeBtn");
 homeBtn.addEventListener("click", (e) => {
     if (pageState.getState() !== "Home") {
-        clearContent(e.target);
+        clearContent();
         setPage(homePage());
         pageState.setStateHome();
 
@@ -38,7 +39,7 @@ const menuBtn = document.getElementById("menuBtn");
 menuBtn.addEventListener("click", (e) => {
     if (pageState.getState() !== "Menu") {
         clearContent();
-        alert("Menu");
+        setPage(menuPage());
         pageState.setStateMenu();
     }
 });
@@ -63,7 +64,6 @@ function clearContent() {
 }
 // inactive all nav's Link
 function clearActive() {
-    alert("Clear Link");
     const navLinkList = document.querySelectorAll("nav > button");
     navLinkList.forEach(navLink => {navLink.classList.remove("active")});
 }
