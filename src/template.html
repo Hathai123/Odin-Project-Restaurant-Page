@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="./styles.css">
     <title>Restaurant Page</title>
 </head>
 
@@ -17,7 +17,70 @@
         </nav>
     </header>
     <div id="content">
+        <div class="menu">
+
+            <div class="title">
+                <div>สั่งผัดกะเพรา</div>
+                <div>My Pad Kaprao's Order</div>
+            </div>
+
+            <div>
+                <div class="inputOrder">
+                    <label for="selectMeat">เลือกเนื้อ (What's Meat?) :</label>
+                    <select id="selectMeat">
+                        <option>หมูกรอบ (Crispy Pork)</option>
+                        <option>หมูชิ้น (Sliced pork)</option>
+                        <option>หมูสับ (Minced pork)</option>
+                        <option>ไก่ชิ้น (Chopped chicken)</option>
+                        <option>ไก่สับ (Minced chicken)</option>
+                    </select>
+                </div>
+                <div id="showMeat" class="displaySelect">
+                    <div class="picContainer">
+                        <img src="./images/pig-01.svg">
+                    </div>
+                    <p>หมูกรอบ</p>
+                </div>
+            </div>
+
+            <div>
+                <div class="inputOrder">
+                    <label for="selectSpicyLevel">ระดับความเผ็ด (Spicy Levels) :</label>
+                    <select id="selectSpicyLevel">
+                        <option>ไม่พริก (No chili)</option>
+                        <option>ไม่เผ็ด (Not spicy)</option>
+                        <option>เผ็ดน้อย (Mildly spicy)</option>
+                        <option selected>เผ็ด (Spicy)</option>
+                    </select>
+                </div>
+                <div id="showSpicyLevel" class="displaySelect">
+                    <p>เผ็ด (Spicy)</p>
+                    <div class="picContainer">
+                        <img src="./images/chilli-01.svg">
+                    </div>
+                    <p>5</p>
+                </div>
+            </div>
+
+            <div>
+                <div class="inputOrder">
+                    <label for="addEgg">เพิ่มไข่ดาวไหม? (Add Fried-Egg?) </label>
+                    <div>
+                        <label for="addEgg">เพิ่มไข่ (0 - 5) :</label>
+                        <input type="number" id="addEgg" min="0" max="5" value="0">
+                        <label for="addEgg">ใบ</label>
+                    </div>
+                </div>
+                <div id="showFriedEgg" class="displaySelect">
+                    <div class="picContainer">
+                        <img src="./images/fried-egg-01.svg">
+                    </div>
+                    <p>ใส่ไข่ดาว 1 ใบ</p>
+                </div>
+            </div>
+        </div>
     </div>
+
 </body>
 
 </html>
