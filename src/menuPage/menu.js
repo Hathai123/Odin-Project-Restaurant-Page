@@ -2,6 +2,7 @@ import "./menu.css";
 
 import meatOrder from "./meatOrder.js";
 import spicyOrder from "./spicyOrder.js";
+import eggOrder from "./eggOrder.js";
 
 export default function menuPage() {
     const menuBtn = document.getElementById("menuBtn");
@@ -27,6 +28,7 @@ export default function menuPage() {
     
     menuDiv.appendChild(meatOrder());
     menuDiv.appendChild(spicyOrder());
+    menuDiv.appendChild(eggOrder());
     
 
 
