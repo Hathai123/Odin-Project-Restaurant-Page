@@ -1,19 +1,10 @@
 import "./styles.css";
 
 import { setPage, clearContent } from "./setPage.js";
+import pageState from "./pageState.js";
 
 import homePage from "./homePage/home.js";
 import menuPage from "./menuPage/menu.js";
-
-// object for check which page we're in
-const pageState = (function () {
-    let state = "Home";
-    const getState = () => state;
-    const setStateHome = () => { state = "Home" };
-    const setStateMenu = () => { state = "Menu" };
-    const setStateAbout = () => { state = "About" };
-    return { getState, setStateHome, setStateMenu, setStateAbout };
-})();
 
 
 // start web
