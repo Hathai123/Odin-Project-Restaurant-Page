@@ -1,5 +1,9 @@
 import "./home.css";
 
+import { setPage, clearContent } from "../setPage.js";
+import pageState from "../pageState.js";
+import menuPage from "../menuPage/menu.js";
+
 export default function homePage() {
     const homeBtn = document.getElementById("homeBtn");
     homeBtn.classList.add("active");
@@ -23,7 +27,9 @@ export default function homePage() {
     toMenuBtn.textContent = "Menu";
     toMenuBtn.setAttribute("class", "toMenuBtn");
     toMenuBtn.addEventListener("click", () => {
-        alert("Menu");
+        clearContent();
+        setPage(menuPage());
+        pageState.setStateMenu();
     })
     homeDiv.appendChild(toMenuBtn);
     return homeDiv;
