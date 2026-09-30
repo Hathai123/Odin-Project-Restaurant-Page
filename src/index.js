@@ -1,9 +1,9 @@
 import "./styles.css";
 
+import { setPage, clearContent } from "./setPage.js";
+
 import homePage from "./homePage/home.js";
 import menuPage from "./menuPage/menu.js";
-
-const content = document.getElementById("content");
 
 // object for check which page we're in
 const pageState = (function () {
@@ -15,10 +15,6 @@ const pageState = (function () {
     return { getState, setStateHome, setStateMenu, setStateAbout };
 })();
 
-function setPage(thePage) {
-    let page = thePage;
-    content.appendChild(page);
-}
 
 // start web
 setPage(homePage());
@@ -55,15 +51,3 @@ aboutBtn.addEventListener("click", (e) => {
 });
 
 
-// function for clear content
-function clearContent() {
-    clearActive();
-    while (content.lastElementChild) {
-        content.removeChild(content.lastElementChild);
-    }
-}
-// inactive all nav's Link
-function clearActive() {
-    const navLinkList = document.querySelectorAll("nav > button");
-    navLinkList.forEach(navLink => {navLink.classList.remove("active")});
-}
