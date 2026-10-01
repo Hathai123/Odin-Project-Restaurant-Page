@@ -5,7 +5,7 @@ import pageState from "./pageState.js";
 
 import homePage from "./homePage/home.js";
 import menuPage from "./menuPage/menu.js";
-
+import aboutPage from "./aboutPage/about.js";
 
 // start web
 setPage(homePage());
@@ -36,7 +36,7 @@ const aboutBtn = document.getElementById("aboutBtn");
 aboutBtn.addEventListener("click", (e) => {
     if (pageState.getState() !== "About") {
         clearContent();
-        alert("About");
+        setPage(aboutPage());
         pageState.setStateAbout();
     }
 });
