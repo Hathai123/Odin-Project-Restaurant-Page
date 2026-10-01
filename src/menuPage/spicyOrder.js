@@ -54,7 +54,7 @@ export default function spicySection() {
     const p = document.createElement("p");
     const chiliP = document.createElement("p");
 
-    setSpicyDisplay(img, 5, p, "หมูกรอบ", chiliP);
+    setSpicyDisplay(img, 5, p, "เผ็ด",chiliP);
     showspicy.appendChild(p);
     showspicy.appendChild(picContainer);
     showspicy.appendChild(chiliP);
