@@ -10,6 +10,7 @@ export default function meatSection() {
 
     // Meat's Input
     const meatOrder = document.createElement("div");
+    meatOrder.setAttribute("id", "meatOrder");
     meatOrder.setAttribute("class", "inputOrder");
 
     const selectMeat = document.createElement("select");

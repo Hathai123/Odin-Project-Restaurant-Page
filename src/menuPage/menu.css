@@ -18,7 +18,8 @@
     color: rgb(224, 104, 0);
 }
 
-.inputOrder{
+/* css for input */
+.inputOrder {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -44,14 +45,48 @@ input {
     line-height: 1.5;
 }
 
-.picContainer {
+.displaySelect .picContainer {
     flex-shrink: 0;
     height: 50px;
     width: 50px;
 }
 
-.picContainer img {
+.displaySelect .picContainer img {
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+/* css for example */
+
+#example {
+    background-color: rgb(224, 104, 0);
+    cursor: pointer;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 24px;
+    border: none;
+    margin-bottom: 30px;
+}
+
+
+.exampleContainer{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    gap: 10px;
+}
+
+.exampleContainer .picContainer {
+    cursor: pointer;
+    height: 100%;
+    flex: 1;
+    border: 5px solid orange;
+}
+
+.exampleContainer .picContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
